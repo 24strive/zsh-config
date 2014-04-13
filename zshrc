@@ -6,10 +6,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(~/.zsh/completion $fpath)
 
 # Path
-
-
-
-export PATH="$ANDROIDPATH:$HOME/Library/Haskell/bin:/Users/lenage/bin:/usr/local/sbin:/usr/local/bin:/Users/lenage/Project/golang/bin:$PATH";
+export PATH="/Users/heping/bin:/usr/local/sbin:/usr/local/bin:$PATH";
 # Setting ZSH_THEME
 if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
 
@@ -24,16 +21,15 @@ RPROMPT='%{$fg[$NCOLOR]%}%p $(git_prompt_info)%{$reset_color%}'
 
 # Load git functions
 #source "/Users/lenage/.zsh/lib/gpg-agent.zsh"
-source "/Users/lenage/.zsh/lib/git.zsh"
-source "/Users/lenage/.zsh/lib/completion.zsh"
-source "/Users/lenage/.zsh/lib/correction.zsh"
+source "/Users/heping/.zsh/lib/git.zsh"
+source "/Users/heping/.zsh/lib/completion.zsh"
+source "/Users/heping/.zsh/lib/correction.zsh"
 # aliases
 if [ -e "$HOME/.zsh/lib/aliases.zsh" ]; then
   source "$HOME/.zsh/lib/aliases.zsh"
 fi
 # Load custom files
-source "/Users/lenage/.zsh/custom/lenage.zsh"
-source "/Users/lenage/.zsh/custom/project.zsh"
+source "/Users/heping/.zsh/custom/project.zsh"
 
 # automatically enter directories without cd
 setopt auto_cd
@@ -113,13 +109,6 @@ export PAGER=less
 export LC_CTYPE=en_US.UTF-8
 ulimit -s unlimited
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-### Added by the SMLNG 110.75
-export PATH="/usr/local/smlnj-110.75/bin:$PATH"
-### add node PATH
-export PATH="/usr/local/share/npm/bin:$PATH"
-
 ## plugins
 plugins=(colored-man)
 
@@ -135,6 +124,3 @@ done
 export CDPATH=~/Project
 ## FOR python virtualenvwrapper
 #http://docs.python-guide.org/en/latest/dev/virtualenvs/
-export WORKON_HOME=~/.pythonenv
-source /usr/local/bin/virtualenvwrapper.sh
-source /usr/local/Cellar/autoenv/0.1.0/activate.sh
